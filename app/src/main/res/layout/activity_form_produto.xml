@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.FormProdutoActivity"
+    android:background="@color/background_App">
+
+
+
+    <include
+        android:id="@+id/include2"
+        layout="@layout/toolbar_voltar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            >
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center_horizontal"
+                app:cardCornerRadius="5dp">
+
+                <ImageView
+                    android:id="@+id/imagem_produto"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:onClick="abrirGaleria"
+                    android:src="@drawable/ic_logo"/>
+
+
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:paddingTop="16dp"
+                android:text="Descrição"
+                android:textColor="@android:color/black" />
+
+            <EditText
+                android:id="@+id/edit_produto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_edit"
+                android:hint="Nome do produto"
+                android:inputType="text"
+                android:padding="16dp"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Estoque"
+                android:paddingStart="10dp"
+                android:paddingTop="16dp"
+                android:textColor="@android:color/black"/>
+
+            <EditText
+                android:id="@+id/edit_quantidade"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_edit"
+                android:hint="Quantidade"
+                android:inputType="number"
+                android:padding="16dp"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Valor"
+                android:paddingStart="16dp"
+                android:paddingTop="16dp"
+                android:textColor="@android:color/black"/>
+
+            <EditText
+                android:id="@+id/edit_valor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_edit"
+                android:hint="Valor do produto"
+                android:inputType="numberDecimal"
+                android:padding="16dp"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+
+                android:text="Valor de custo"
+                android:textColor="@android:color/black"/>
+
+            <EditText
+                android:id="@+id/edit_valor_custo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_edit"
+                android:hint="Valor de custo do produto"
+                android:inputType="numberDecimal"
+                android:padding="16dp"
+
+                android:textColor="@android:color/black" />
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:orientation="horizontal">
+               <android.widget.Button
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="16dp"
+                   android:background="@drawable/bg_btn"
+                   android:onClick="salvarProduto"
+                   android:text="Salvar/Editar"
+                   android:layout_weight="1"
+                   android:textAllCaps="false"
+                   android:textColor="#000000"
+                   android:textStyle="bold"
+                   android:textSize="16sp"
+                   app:backgroundTint="@android:color/white" />
+
+           </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

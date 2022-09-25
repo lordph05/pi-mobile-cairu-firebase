@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "627565432976",
+    "project_id": "controle-de-produtos-6d839",
+    "storage_bucket": "controle-de-produtos-6d839.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:627565432976:android:82b6375497445acd308815",
+        "android_client_info": {
+          "package_name": "com.example.controledeprodutos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "627565432976-7v0ij6ni58ctd1uesqrb13d3j6sehjr4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.controledeprodutos",
+            "certificate_hash": "fee670e00519642a0124b8748661a8c37e3990eb"
+          }
+        },
+        {
+          "client_id": "627565432976-us2cp64ilfrgvkh7fvgon1ie62dgp71q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEBfmQnGPdtF26I93ApkcLQoWwTFpFffY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "627565432976-us2cp64ilfrgvkh7fvgon1ie62dgp71q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

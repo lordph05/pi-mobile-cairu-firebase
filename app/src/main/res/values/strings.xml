@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Controle de Produtos</string>
+    <string name="text_email">Email</string>
+    <string name="text_senha">Senha</string>
+    <string name="text_criar_conta">criar conta</string>
+    <string name="text_recuperar_conta">Recuperar conta</string>
+    <string name="text_site">Site: https://xtremmeinformatica.com.br/</string>
+    <string name="edit_email">Seu e-mail</string>
+    <string name="edit_senha">Sua senha</string>
+
+</resources>
