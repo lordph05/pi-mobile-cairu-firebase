@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_App"
-    tools:context=".Activity.MainActivity">
+    tools:context=".Activity.MainPerifericosActivity">
 
     <include
         android:id="@+id/include"
@@ -18,7 +17,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="@+id/rvProdutos"
+        app:layout_constraintBottom_toBottomOf="@+id/rvPerifericos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.426"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,7 +47,7 @@
     </LinearLayout>
 
     <com.tsuryo.swipeablerv.SwipeableRecyclerView
-        android:id="@+id/rvProdutos"
+        android:id="@+id/rvPerifericos"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -66,3 +65,4 @@
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+

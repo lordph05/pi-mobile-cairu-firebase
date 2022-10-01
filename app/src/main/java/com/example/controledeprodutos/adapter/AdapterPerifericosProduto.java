@@ -5,24 +5,23 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.controledeprodutos.R;
-import com.example.controledeprodutos.model.Produto;
+import com.example.controledeprodutos.model.Perifericos;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class AdapterProduto  extends RecyclerView.Adapter<AdapterProduto.MyViewHolder> {
+public class AdapterPerifericosProduto extends RecyclerView.Adapter<AdapterPerifericosProduto.MyViewHolder> {
 
-    private List <Produto> produtoList;
+    private List <Perifericos> perifericosList;
     private  OnClick onClick;
 
-    public AdapterProduto(List<Produto> produtoList, OnClick onClick) {
-        this.produtoList = produtoList;
+    public AdapterPerifericosProduto(List<Perifericos> perifericosList, OnClick onClick) {
+        this.perifericosList = perifericosList;
         this.onClick = onClick;
 
     }
@@ -36,25 +35,25 @@ public class AdapterProduto  extends RecyclerView.Adapter<AdapterProduto.MyViewH
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-Produto produto = produtoList.get(position);
-        Picasso.get().load(produto.getUrlImagem()).into(holder.img_descricao);
-holder.textProduto.setText(produto.getNome());
-holder.textEstoque.setText("EStoque: "+String.valueOf(produto.getEstoque()));
-        holder.textValor.setText("R$: "+String.valueOf(produto.getValor()));
-        holder.text_valor_custo.setText("Valor custo: "+String.valueOf(produto.getValor_custo()));
+Perifericos perifericos = perifericosList.get(position);
+        Picasso.get().load(perifericos.getUrlImagem()).into(holder.img_descricao);
+holder.textProduto.setText(perifericos.getNome());
+holder.textEstoque.setText("EStoque: "+String.valueOf(perifericos.getEstoque()));
+        holder.textValor.setText("R$: "+String.valueOf(perifericos.getValor()));
+        holder.text_valor_custo.setText("Valor custo: "+String.valueOf(perifericos.getValor_custo()));
 
 
-        holder.itemView.setOnClickListener(view -> onClick.onClickListener(produto));
+        holder.itemView.setOnClickListener(view -> onClick.onClickListener(perifericos));
 
     }
 
     @Override
     public int getItemCount() {
-        return produtoList.size();
+        return perifericosList.size();
     }
 
     public interface OnClick{
-        void onClickListener (Produto produto);
+        void onClickListener (Perifericos perifericos);
     }
 
     static class MyViewHolder extends RecyclerView.ViewHolder{

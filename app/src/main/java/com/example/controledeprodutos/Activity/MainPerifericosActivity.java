@@ -4,10 +4,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.PopupMenu;
@@ -15,11 +13,11 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.controledeprodutos.R;
 import com.example.controledeprodutos.adapter.AdapterProduto;
 import com.example.controledeprodutos.autenticacao.LoginActivity;
 import com.example.controledeprodutos.helper.FirebaseHelper;
 import com.example.controledeprodutos.model.Produto;
-import com.example.controledeprodutos.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -31,12 +29,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements AdapterProduto.OnClick {
+public class MainPerifericosActivity extends AppCompatActivity implements AdapterProduto.OnClick {
 
     private AdapterProduto adapterProduto;
     private List<Produto> produtoList = new ArrayList<>();
 
-    private SwipeableRecyclerView rvProdutos;
+    private SwipeableRecyclerView rvPerifericos;
 
     private ImageButton ibAdd;
     private ImageButton ib_voltar_cat;
@@ -47,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements AdapterProduto.On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_perifericos);
 
         iniciaComponentes();
 
@@ -58,7 +56,7 @@ public class MainActivity extends AppCompatActivity implements AdapterProduto.On
 
     private void ouvinteCliques() {
         ibAdd.setOnClickListener(view -> {
-            startActivity(new Intent(this, FormProdutoActivity.class));
+            startActivity(new Intent(this, FormProdutoPerifeActivity.class));
         });
         ib_voltar_cat.setOnClickListener(view -> {
             startActivity(new Intent(this,InforProdutoActivity.class));
@@ -89,7 +87,7 @@ public class MainActivity extends AppCompatActivity implements AdapterProduto.On
 
     private void recuperaProdutos() {
         DatabaseReference produtosRef = FirebaseHelper.getDatabaseReference()
-                .child("produtos")
+                .child("perifericos")
                 .child(FirebaseHelper.getIdFirebase());
         produtosRef.addValueEventListener(new ValueEventListener() {
 
@@ -116,12 +114,12 @@ public class MainActivity extends AppCompatActivity implements AdapterProduto.On
 
     private void configRecyclerView() {
 
-        rvProdutos.setLayoutManager(new LinearLayoutManager(this));
-        rvProdutos.setHasFixedSize(true);
+        rvPerifericos.setLayoutManager(new LinearLayoutManager(this));
+        rvPerifericos.setHasFixedSize(true);
         adapterProduto = new AdapterProduto(produtoList, this);
-        rvProdutos.setAdapter(adapterProduto);
+        rvPerifericos.setAdapter(adapterProduto);
 
-        rvProdutos.setListener(new SwipeLeftRightCallback.Listener() {
+        rvPerifericos.setListener(new SwipeLeftRightCallback.Listener() {
             @Override
             public void onSwipedLeft(int position) {
 
@@ -153,17 +151,19 @@ public class MainActivity extends AppCompatActivity implements AdapterProduto.On
 
     @Override
     public void onClickListener(Produto produto) {
-        Intent intent = new Intent(this, FormProdutoActivity.class);
-        intent.putExtra("produto", produto);
+        Intent intent = new Intent(this, FormProdutoPerifeActivity.class);
+        intent.putExtra("perifericos", produto);
         startActivity(intent);
     }
 
     private void iniciaComponentes() {
         ibAdd = findViewById(R.id.ib_add);
         ibVerMais = findViewById(R.id.ib_ver_mais);
-        rvProdutos = findViewById(R.id.rvProdutos);
+        rvPerifericos = findViewById(R.id.rvPerifericos);
         text_info = findViewById(R.id.text_info);
         progressBar = findViewById(R.id.progressBar);
         ib_voltar_cat = findViewById(R.id.ib_voltar_cat);
     }
 }
+
+

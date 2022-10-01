@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.controledeprodutos.Activity.InforProdutoActivity;
 import com.example.controledeprodutos.Activity.MainActivity;
 import com.example.controledeprodutos.R;
 import com.example.controledeprodutos.helper.FirebaseHelper;
@@ -60,7 +61,7 @@ public class LoginActivity extends AppCompatActivity {
                 email,senha) .addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
                 finish();
-                startActivity (new Intent(this, MainActivity.class));
+                startActivity (new Intent(this, InforProdutoActivity.class));
 
             } else {
                 String error = task.getException().getMessage();

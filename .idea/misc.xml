@@ -45,15 +45,21 @@
         <entry key="..\:/Users/pH/Documents/ControledeProdutos/app/src/main/res/drawable/ic_ver_mais.xml" value="0.187" />
         <entry key="..\:/Users/pH/Documents/ControledeProdutos/app/src/main/res/drawable/ic_volta.xml" value="0.187" />
         <entry key="..\:/Users/pH/Documents/ControledeProdutos/app/src/main/res/drawable/ic_whatsapp_image.xml" value="0.138" />
+        <entry key="..\:/Users/pH/Documents/ControledeProdutos/app/src/main/res/layout/activity_catalogo.xml" value="0.27708333333333335" />
         <entry key="..\:/Users/pH/Documents/ControledeProdutos/app/src/main/res/layout/activity_criar_conta.xml" value="0.24166666666666667" />
         <entry key="..\:/Users/pH/Documents/ControledeProdutos/app/src/main/res/layout/activity_form_produto.xml" value="0.24166666666666667" />
+        <entry key="..\:/Users/pH/Documents/ControledeProdutos/app/src/main/res/layout/activity_form_produto_perife.xml" value="0.27708333333333335" />
+        <entry key="..\:/Users/pH/Documents/ControledeProdutos/app/src/main/res/layout/activity_infor_produto.xml" value="0.27708333333333335" />
         <entry key="..\:/Users/pH/Documents/ControledeProdutos/app/src/main/res/layout/activity_login.xml" value="0.24166666666666667" />
         <entry key="..\:/Users/pH/Documents/ControledeProdutos/app/src/main/res/layout/activity_main.xml" value="0.27708333333333335" />
+        <entry key="..\:/Users/pH/Documents/ControledeProdutos/app/src/main/res/layout/activity_main_perifericos.xml" value="0.27708333333333335" />
         <entry key="..\:/Users/pH/Documents/ControledeProdutos/app/src/main/res/layout/activity_recuperar_conta.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/pH/Documents/ControledeProdutos/app/src/main/res/layout/activity_spashn.xml" value="0.125" />
+        <entry key="..\:/Users/pH/Documents/ControledeProdutos/app/src/main/res/layout/item_perifericos.xml" value="0.27708333333333335" />
         <entry key="..\:/Users/pH/Documents/ControledeProdutos/app/src/main/res/layout/item_produto.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/pH/Documents/ControledeProdutos/app/src/main/res/layout/toolbar.xml" value="0.27239583333333334" />
         <entry key="..\:/Users/pH/Documents/ControledeProdutos/app/src/main/res/layout/toolbar_voltar.xml" value="0.24166666666666667" />
+        <entry key="..\:/Users/pH/Documents/ControledeProdutos/app/src/main/res/menu/menu_toolbar.xml" value="0.27708333333333335" />
         <entry key="..\:/Users/pH/Documents/ControledeProdutos/app/src/main/res/mipmap-anydpi-v26/ic_laucher.xml" value="0.1905" />
         <entry key="..\:/Users/pH/Documents/ControledeProdutos/app/src/main/res/mipmap-anydpi-v26/ic_laucher_round.xml" value="0.1385" />
         <entry key="..\:/Users/pH/Documents/ControledeProdutos/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1355" />
