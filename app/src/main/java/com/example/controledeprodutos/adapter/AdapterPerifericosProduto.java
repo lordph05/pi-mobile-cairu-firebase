@@ -29,7 +29,7 @@ public class AdapterPerifericosProduto extends RecyclerView.Adapter<AdapterPerif
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View intemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_produto, parent,false);
+        View intemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_perifericos, parent,false);
         return new MyViewHolder(intemView);
     }
 

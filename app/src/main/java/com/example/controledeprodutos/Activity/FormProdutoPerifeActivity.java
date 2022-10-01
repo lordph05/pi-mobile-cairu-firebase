@@ -19,6 +19,7 @@ import android.widget.Toast;
 
 import com.example.controledeprodutos.R;
 import com.example.controledeprodutos.helper.FirebaseHelper;
+import com.example.controledeprodutos.model.Perifericos;
 import com.example.controledeprodutos.model.Produto;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
@@ -41,7 +42,7 @@ public class FormProdutoPerifeActivity<GALERA> extends AppCompatActivity {
     EditText edit_valor;
     EditText edit_valor_custo;
 
-    private Produto produto;
+    private Perifericos perifericos;
 
 
     @Override
@@ -54,7 +55,7 @@ public class FormProdutoPerifeActivity<GALERA> extends AppCompatActivity {
 
         Bundle bundle = getIntent().getExtras();
         if (bundle != null) {
-            produto = (Produto) bundle.getSerializable("produto");
+            perifericos = (Perifericos) bundle.getSerializable("perifericos");
             editProduto();
 
 
@@ -107,15 +108,15 @@ public class FormProdutoPerifeActivity<GALERA> extends AppCompatActivity {
     }
 
     private void editProduto() {
-        Picasso.get().load(produto.getUrlImagem()).into(imagem_produto);
-        edit_produto.setText(produto.getNome());
-        edit_quantidade.setText(String.valueOf(produto.getEstoque()));
-        edit_valor.setText(String.valueOf(produto.getValor()));
-        edit_valor_custo.setText(String.valueOf(produto.getValor_custo()));
+        Picasso.get().load(perifericos.getUrlImagem()).into(imagem_produto);
+        edit_produto.setText(perifericos.getNome());
+        edit_quantidade.setText(String.valueOf(perifericos.getEstoque()));
+        edit_valor.setText(String.valueOf(perifericos.getValor()));
+        edit_valor_custo.setText(String.valueOf(perifericos.getValor_custo()));
 
     }
 
-    public void salvarProduto(View view) {
+    public void salvarPerifericos(View view) {
 
         String nome = edit_produto.getText().toString();
         String quantidade = edit_quantidade.getText().toString();
@@ -132,20 +133,20 @@ public class FormProdutoPerifeActivity<GALERA> extends AppCompatActivity {
 
                         if (valorproduto > 0) {
 
-                            if (produto == null) produto = new Produto();
-                            produto.setNome(nome);
-                            produto.setEstoque(qtd);
-                            produto.setValor(valorproduto);
-                            produto.setValor_custo(valorproduto); // linha precisa ser alterada cria uma variavel para valor de custo.
+                            if (perifericos == null) perifericos = new Perifericos();
+                            perifericos.setNome(nome);
+                            perifericos.setEstoque(qtd);
+                            perifericos.setValor(valorproduto);
+                            perifericos.setValor_custo(valorproduto); // linha precisa ser alterada cria uma variavel para valor de custo.
 
                             if (caminhoImagem != null){
                                 salvarImagemProduto();
                             }else{
-                                if (produto.getUrlImagem()!= null){
-                                    produto.salvarProduto();
+                                if (perifericos.getUrlImagem()!= null){
+                                    perifericos.salvarPerifericos();
                                 }else if (caminhoImagem == null){
                                     Toast.makeText(this, "Selecione uma imagem.", Toast.LENGTH_SHORT).show();
-                                    produto.salvarProduto();
+                                    perifericos.salvarPerifericos();
                                 }
                             }
 
@@ -188,15 +189,15 @@ public class FormProdutoPerifeActivity<GALERA> extends AppCompatActivity {
     private void salvarImagemProduto () {
         StorageReference reference = FirebaseHelper.getStorageReference()
                 .child("imagens")
-                .child("produtos")
+                .child("perifericos")
                 .child(FirebaseHelper.getIdFirebase())
-                .child(produto.getId() +".jpeg");
+                .child(perifericos.getId() +".jpeg");
 
         UploadTask uploadTask = reference.putFile(Uri.parse(caminhoImagem));
         uploadTask.addOnSuccessListener(taskSnapshot -> reference.getDownloadUrl().addOnCompleteListener(task -> {
 
-            produto.setUrlImagem(task.getResult().toString());
-            produto.salvarProduto();
+            perifericos.setUrlImagem(task.getResult().toString());
+            perifericos.salvarPerifericos();
 
             finish();
 

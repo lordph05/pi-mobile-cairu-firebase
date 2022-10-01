@@ -14,9 +14,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.controledeprodutos.R;
+import com.example.controledeprodutos.adapter.AdapterPerifericosProduto;
 import com.example.controledeprodutos.adapter.AdapterProduto;
 import com.example.controledeprodutos.autenticacao.LoginActivity;
 import com.example.controledeprodutos.helper.FirebaseHelper;
+import com.example.controledeprodutos.model.Perifericos;
 import com.example.controledeprodutos.model.Produto;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -29,10 +31,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class MainPerifericosActivity extends AppCompatActivity implements AdapterProduto.OnClick {
+public class MainPerifericosActivity extends AppCompatActivity implements AdapterPerifericosProduto.OnClick {
 
-    private AdapterProduto adapterProduto;
-    private List<Produto> produtoList = new ArrayList<>();
+    private AdapterPerifericosProduto adapterPerifericosProduto;
+    private List<Perifericos> perifericosList = new ArrayList<>();
 
     private SwipeableRecyclerView rvPerifericos;
 
@@ -93,15 +95,14 @@ public class MainPerifericosActivity extends AppCompatActivity implements Adapte
 
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                produtoList.clear();
+                perifericosList.clear();
                 for (DataSnapshot snapshot1 : snapshot.getChildren()) {
-                    Produto produto = snapshot1.getValue(Produto.class);
-                    produtoList.add(produto);
+                    Perifericos perifericos = snapshot1.getValue(Perifericos.class);
+                    perifericosList.add(perifericos);
                 }
                 verificaQtdLista();
-                Collections.reverse(produtoList);
-                adapterProduto.notifyDataSetChanged();
-
+                Collections.reverse(perifericosList);
+                adapterPerifericosProduto.notifyDataSetChanged();
 
             }
 
@@ -116,8 +117,8 @@ public class MainPerifericosActivity extends AppCompatActivity implements Adapte
 
         rvPerifericos.setLayoutManager(new LinearLayoutManager(this));
         rvPerifericos.setHasFixedSize(true);
-        adapterProduto = new AdapterProduto(produtoList, this);
-        rvPerifericos.setAdapter(adapterProduto);
+        adapterPerifericosProduto = new AdapterPerifericosProduto(perifericosList, this);
+        rvPerifericos.setAdapter(adapterPerifericosProduto);
 
         rvPerifericos.setListener(new SwipeLeftRightCallback.Listener() {
             @Override
@@ -127,11 +128,11 @@ public class MainPerifericosActivity extends AppCompatActivity implements Adapte
 
             @Override
             public void onSwipedRight(int position) {
-                Produto produto = produtoList.get(position);
+                Perifericos perifericos = perifericosList.get(position);
 
-                produtoList.remove(produto);
-                produto.deletaProduto();
-                adapterProduto.notifyItemRemoved(position);
+                perifericosList.remove(perifericos);
+                perifericos.deletaPerifericos();
+                adapterPerifericosProduto.notifyItemRemoved(position);
 
                 verificaQtdLista();
 
@@ -140,7 +141,7 @@ public class MainPerifericosActivity extends AppCompatActivity implements Adapte
     }
 
     private void verificaQtdLista() {
-        if (produtoList.size() == 0) {
+        if (perifericosList.size() == 0) {
             text_info.setText("Nenhum produto cadastrado.");
             text_info.setVisibility(View.VISIBLE);
         } else {
@@ -150,9 +151,9 @@ public class MainPerifericosActivity extends AppCompatActivity implements Adapte
     }
 
     @Override
-    public void onClickListener(Produto produto) {
+    public void onClickListener(Perifericos perifericos) {
         Intent intent = new Intent(this, FormProdutoPerifeActivity.class);
-        intent.putExtra("perifericos", produto);
+        intent.putExtra("perifericos", perifericos);
         startActivity(intent);
     }
 
@@ -164,6 +165,11 @@ public class MainPerifericosActivity extends AppCompatActivity implements Adapte
         progressBar = findViewById(R.id.progressBar);
         ib_voltar_cat = findViewById(R.id.ib_voltar_cat);
     }
+
+//    @Override
+//    public void onClickListener(Perifericos perifericos) {
+//
+//    }
 }
 
 

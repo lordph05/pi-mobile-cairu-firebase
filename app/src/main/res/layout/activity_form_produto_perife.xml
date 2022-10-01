@@ -130,7 +130,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:background="@drawable/bg_btn"
-                    android:onClick="salvarProduto"
+                    android:onClick="salvarPerifericos"
                     android:text="Salvar/Editar"
                     android:layout_weight="1"
                     android:textAllCaps="false"
