@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Activity.FormProdutoActivity"
-    android:background="@color/background_App">
+    android:background="@drawable/background">
 
 
 
@@ -33,20 +33,20 @@
             >
 
             <androidx.cardview.widget.CardView
-                android:layout_width="200dp"
-                android:layout_height="200dp"
+                android:layout_width="177dp"
+                android:layout_height="152dp"
                 android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@android:color/transparent"
                 app:cardCornerRadius="5dp">
 
                 <ImageView
                     android:id="@+id/imagem_produto"
-                    android:layout_width="match_parent"
+                    android:layout_width="198dp"
                     android:layout_height="match_parent"
                     android:onClick="abrirGaleria"
-                    android:src="@drawable/ic_logo"/>
-
-
-
+                    android:layout_gravity="center"
+                    android:src="@drawable/foto" />
 
 
             </androidx.cardview.widget.CardView>

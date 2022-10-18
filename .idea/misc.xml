@@ -17,6 +17,8 @@
         <entry key="..\:/Users/pH/AndroidStudioProjects/ControledeProdutos/app/src/main/res/layout/toolbar_voltar.xml" value="0.2760416666666667" />
         <entry key="..\:/Users/pH/AndroidStudioProjects/ControledeProdutos/app/src/main/res/menu/menu_toolbar.xml" value="0.27282051282051284" />
         <entry key="..\:/Users/pH/AndroidStudioProjects/ControledeProdutos/app/src/main/res/menu/toolbar.xml" value="0.2760416666666667" />
+        <entry key="..\:/Users/pH/Documents/ControledeProdutos/app/src/main/res/drawable-v24/background.xml" value="0.164" />
+        <entry key="..\:/Users/pH/Documents/ControledeProdutos/app/src/main/res/drawable-v24/bg_edit.xml" value="0.164" />
         <entry key="..\:/Users/pH/Documents/ControledeProdutos/app/src/main/res/drawable-v24/ic_launcher_background.xml" value="0.1355" />
         <entry key="..\:/Users/pH/Documents/ControledeProdutos/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1875" />
         <entry key="..\:/Users/pH/Documents/ControledeProdutos/app/src/main/res/drawable/bg_btn.xml" value="0.175" />
@@ -25,6 +27,7 @@
         <entry key="..\:/Users/pH/Documents/ControledeProdutos/app/src/main/res/drawable/ic_delete.xml" value="0.187" />
         <entry key="..\:/Users/pH/Documents/ControledeProdutos/app/src/main/res/drawable/ic_edit.xml" value="0.187" />
         <entry key="..\:/Users/pH/Documents/ControledeProdutos/app/src/main/res/drawable/ic_final_final.xml" value="0.1" />
+        <entry key="..\:/Users/pH/Documents/ControledeProdutos/app/src/main/res/drawable/ic_folder_icon.xml" value="0.1385" />
         <entry key="..\:/Users/pH/Documents/ControledeProdutos/app/src/main/res/drawable/ic_inicio.xml" value="0.187" />
         <entry key="..\:/Users/pH/Documents/ControledeProdutos/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1875" />
         <entry key="..\:/Users/pH/Documents/ControledeProdutos/app/src/main/res/drawable/ic_logo.xml" value="0.1875" />
@@ -54,6 +57,7 @@
         <entry key="..\:/Users/pH/Documents/ControledeProdutos/app/src/main/res/layout/activity_main.xml" value="0.27708333333333335" />
         <entry key="..\:/Users/pH/Documents/ControledeProdutos/app/src/main/res/layout/activity_main_perifericos.xml" value="0.27708333333333335" />
         <entry key="..\:/Users/pH/Documents/ControledeProdutos/app/src/main/res/layout/activity_recuperar_conta.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/pH/Documents/ControledeProdutos/app/src/main/res/layout/activity_redes_conectividade.xml" value="0.27708333333333335" />
         <entry key="..\:/Users/pH/Documents/ControledeProdutos/app/src/main/res/layout/activity_spashn.xml" value="0.125" />
         <entry key="..\:/Users/pH/Documents/ControledeProdutos/app/src/main/res/layout/item_perifericos.xml" value="0.27708333333333335" />
         <entry key="..\:/Users/pH/Documents/ControledeProdutos/app/src/main/res/layout/item_produto.xml" value="0.27291666666666664" />

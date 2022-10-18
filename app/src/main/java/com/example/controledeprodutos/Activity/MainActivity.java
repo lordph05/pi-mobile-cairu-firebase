@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity implements AdapterProduto.On
         DatabaseReference produtosRef = FirebaseHelper.getDatabaseReference()
                 .child("produtos")
                 .child(FirebaseHelper.getIdFirebase());
-        produtosRef.addValueEventListener(new ValueEventListener() {
+        produtosRef.addListenerForSingleValueEvent(new ValueEventListener() {
 
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {

@@ -60,6 +60,7 @@ holder.textEstoque.setText("EStoque: "+String.valueOf(produto.getEstoque()));
     static class MyViewHolder extends RecyclerView.ViewHolder{
         ImageView img_descricao;
         TextView textProduto, textEstoque, textValor, text_valor_custo;
+
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
