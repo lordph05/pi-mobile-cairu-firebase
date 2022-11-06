@@ -173,6 +173,9 @@ public class FormProdutoActivity<GALERA> extends AppCompatActivity {
                 } else {
                     edit_quantidade.requestFocus();
                     edit_quantidade.setError("informe a quantidade");
+                    if (qtd <5){
+                        Toast.makeText(this, "pouco estoque", Toast.LENGTH_SHORT).show();
+                    }
                 }
             } else {
                 edit_quantidade.requestFocus();
